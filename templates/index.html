@@ -4,7 +4,7 @@
 
 <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
 
-    <div class="container">
+    <div class="container d-flex align-items-center justify-content-between">
 
         <!-- Logo -->
 
@@ -18,19 +18,27 @@
                 Ashish
             </span>
 
+            <div class="d-flex align-items-center"></div>
+
         </a>
 
+        <div class="d-flex align-items-center">
 
-        <!-- Mobile Toggle -->
 
-        <button class="navbar-toggler border-0 shadow-none"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarMenu">
+            <!-- Mobile Toggle -->
 
-            <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler border-0 shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu">
 
-        </button>
+                <span class="navbar-toggler-icon"></span>
+
+
+            </button>
+
+
+        </div>
 
 
         <!-- Navigation -->
@@ -63,6 +71,15 @@
                     </a>
                 </li>
 
+
+                <li class="nav-item">
+                    <a href="resume button" class="btn resume-btn d-lg-inline-block">
+
+                        Resume
+
+                    </a>
+                </li>
+
             </ul>
 
         </div>
@@ -70,11 +87,6 @@
 
         <!-- Resume Button -->
 
-        <a href="#" class="btn resume-btn d-none d-lg-inline-block">
-
-            Resume
-
-        </a>
 
     </div>
 
@@ -95,15 +107,15 @@
 
     <div class="container">
 
-        <div class="row align-items-center gy-5 mt-4">
+        <div class="row align-items-center gx-5 gy-5 mt-4">
 
             <!-- Left Side -->
 
-            <div class="col-lg-6">
+            <div class="col-md-6 col-lg-6 hero-section">
 
-                <span class="hero-tag">
-                    👋 Welcome to my Portfolio
-                </span>
+                    <span class="hero-tag">
+                        👋 Welcome to my Portfolio
+                    </span>
 
                 <h1 class="hero-title mt-4">
 
@@ -120,20 +132,21 @@
 
                 <p class="hero-description">
 
-                    Passionate about building efficient, scalable and user-friendly applications. I enjoy Automation,
+                    Passionate about building efficient, scalable and user-friendly applications. I enjoy
+                    Automation,
                     learning new technologies.
 
                 </p>
 
                 <div class="hero-buttons">
 
-                    <a href="#projects" class="btn btn-outline-light custom-btn">
+                    <a href="#projects" class="btn btn-outline-light custom-btn view-my-work">
 
                         View My Work
 
                     </a>
 
-                    <a href="#" class="btn btn-outline-light custom-btn">
+                    <a href="#" class="btn btn-outline-light custom-btn contact-me">
 
                         Contact Me
 
@@ -155,31 +168,90 @@
 
                     </div>
 
+
                 </div>
 
             </div>
-
-
             <!-- Right Side -->
 
-            <div class="col-lg-6 text-center">
+            <div class="col-md-6 col-lg-6 d-flex justify-content-center align-items-center hero-image-column">
 
-                <img src="static/assets/img/hero2_img.png"
-                     alt="Profile"
-                     class="hero-image img-fluid">
+                <div class='hero-image-wrapper'>
+                    <img src="static/assets/img/hero2_img.png"
+                         alt="Profile"
+                         class="hero-image">
+                </div>
+
 
             </div>
 
         </div>
 
+
+        <div class='highlight-container'>
+
+            <div class="row row-cols-lg-5">
+
+                <div class="col-md-4 col-sm-4 order-lg-1 order-md-1 order-sm-1 order-1">
+                    <div class=" highlight-items projects-100">
+                        <span><i class='bi-star highlights-icon'></i></span>
+                        <span class='text-center  highlights-text'>100 Projects</span>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-4 order-lg-2 order-md-3 order-sm-3 order-3">
+                    <div class="highlight-items lifelong-learner">
+                        <span><i class='bi-book highlights-icon'></i></span>
+                        <span class='text-center  highlights-text'>Lifelong learner</span>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 order-lg-3 order-md-2 order-sm-2 order-5">
+                    <div class="highlight-items self-taught-dev">
+                        <span><i class='bi-journal-code highlights-icon'></i></span>
+                        <span class='text-center  highlights-text'>Self-Taught Developer</span>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-sm-4 order-lg-4 order-md-4 order-sm-4 order-4">
+                    <div class="highlight-items career-switcher">
+                        <span ><i class='bi-box-arrow-up-right highlights-icon '></i></span>
+                        <span class='text-center  highlights-text'>Career Switcher</span>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-sm-4 order-lg-5 order-md-5 order-sm-5 order-2">
+                    <div class="highlight-items open-to-work">
+                        <span><i class='bi-briefcase highlights-icon'></i></span>
+                        <span class='text-center highlights-text'>Open to Work</span>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
     </div>
+
 
 </section>
 
 <!-- ================= HERO SECTION ================= -->
 
 
-<!-- Highlights -->
+<!-- ================= Highlights Section ================= -->
+
+
 <!-- Projects -->
 <!-- Github -->
 <!-- Tech Stack -->

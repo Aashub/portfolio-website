@@ -129,12 +129,9 @@ body{
 #binaryCanvas{
 
     position:absolute;
-
     inset:0;
-
     width:100%;
     height:100%;
-
     z-index:0;
 
 }
@@ -143,13 +140,9 @@ body{
 .hero{
 
     position: relative;
-
-    padding: 100px 0 80px;
-
-    min-height: 100vh;
-
+    padding: 100px 0 45px;
+    min-height: 90vh;
     background: #111111;
-
     overflow: hidden;
 
 }
@@ -157,7 +150,6 @@ body{
 .hero .container{
 
     position:relative;
-
     z-index:2;
 
 
@@ -179,15 +171,10 @@ body{
 .hero::before{
 
     content: "";
-
     position: absolute;
-
     inset: 0;
-
     background: rgba(17,17,17,0.35);
-
     z-index: 1;
-
 }
 
 
@@ -422,7 +409,7 @@ body{
 
 
 /* ==========================================
-   Media : Query
+   Hero Section : Media Query
 ========================================== */
 
 
@@ -816,3 +803,133 @@ body{
 
     }
 }
+
+
+/* ==========================================
+   Featured Project Section : Media Query
+========================================== */
+
+
+.title-featured-projects{
+
+    margin-top: 6%;
+    color: #333333;
+    font-weight:800;
+}
+
+.description-featured-projects{
+
+    color: #333333;
+    font-weight:600;
+    padding-bottom: 1.9%;
+    max-width: 700px;
+
+
+
+}
+
+
+.featured-project-cards {
+
+   border-radius: 20px;
+   margin-bottom:50px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   will-change: transform;
+
+
+}
+
+
+.card-img-top{
+
+   border-radius: 20px;
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+}
+
+.card-title{
+
+    color: #333333;
+    font-weight:700;
+    padding-bottom: 1.9%;
+
+}
+
+.card-text{
+
+    color: #333333;
+    font-weight:500;
+    font-size: 14px;
+    padding-bottom: 1.5%;
+
+}
+
+.badge{
+
+    background: #FFD43B;
+    color: #333333;
+    font-size: 13px;
+
+    padding: 8px 14px;
+}
+
+.featured-github-button{
+
+    background: #333333;
+    #color: #E5E7EB;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-color: #333333;
+}
+
+.featured-github-button:hover{
+
+    background:#F7F7F7;
+    color:#333333;
+    transform: scale(1.02);
+    border-color: #333333;
+
+}
+
+.featured-project-cards:hover{
+
+
+    transform: translateY(-6px);
+    cursor: pointer;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+
+
+}
+
+
+.show-more-projects-btn{
+
+    background: white;
+    #color: #333333;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border-color: #333333;
+    font-weight: 500;
+    color: #333333;
+
+
+}
+
+.show-more-projects-btn:hover{
+
+    background:#333333;
+    color: white;
+    transform: scale(1.02);
+    border-color: #333333;
+
+}
+
+.show-more-code-icon{
+
+    padding-left:5px;
+    font-size: 1.10rem;
+    font-weight: bold;
+
+}
+
+

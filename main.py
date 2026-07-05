@@ -1,5 +1,19 @@
 from flask import Flask, render_template, request
 import requests
+import os
+from github_graph import GithubData
+
+
+fetch_data = GithubData()
+
+response_status = fetch_data.checking_response()
+
+if response_status == 0:
+    repo_count, overall_stars, overall_forks, overall_contribution = fetch_data.fetching_required_data()
+
+elif response_status == 1:
+    print("please check the above error")
+
 
 
 def send_mail(message_data) :

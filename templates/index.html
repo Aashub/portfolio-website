@@ -363,32 +363,78 @@
 
         <h2 class="github-graph">GitHub Activity</h2>
 
-        <div class="graph-container-grid">
+        <div class="github-contribution-box">
 
-            {% for week in range(num_of_weeks) %}
-            {% for graph in contribution_graph[week]["contributionDays"] %}
+            <p class="contribution-graph-text">Contribution Graph</p>
+            <div class="contribution-wrapper">
 
-            {% if graph.color == "#ebedf0": %}
-            <div class="contribution-none"></div>
+                <div class="days-column">
+                    <div></div>
+                    <div>Mon</div>
+                    <div></div>
+                    <div>Wed</div>
+                    <div></div>
+                    <div>Fri</div>
+                    <div></div>
+                </div>
 
-            {% elif graph.color == "#216e39": %}
-            <div class="contribution-low"></div>
+                <div class="graph-section">
 
-            {% elif graph.color == "#9be9a8": %}
-            <div class="contribution-medium"></div>
+                    <div class="months-row">
+                        {% for month in months_label %}
+                        <div class="contributions-months-label">{{month}}</div>
+                        {% endfor %}
 
-            {% elif graph.color == "#40c463": %}
-            <div class="contribution-high"></div>
+                    </div>
 
-            {% elif graph.color == "#30a14e": %}
-            <div class="contribution-max"></div>
+                    <div class="graph-container-grid">
 
-            {% endif %}
 
-            {% endfor %}
-            {% endfor %}
+                        {% for week in range(num_of_weeks) %}
+                        {% for graph in contribution_graph[week]["contributionDays"] %}
+
+                        {% if graph.color == "#ebedf0": %}
+                        <div class="contribution-none"></div>
+
+                        {% elif graph.color == "#216e39": %}
+                        <div class="contribution-low"></div>
+
+                        {% elif graph.color == "#9be9a8": %}
+                        <div class="contribution-medium"></div>
+
+                        {% elif graph.color == "#40c463": %}
+                        <div class="contribution-high"></div>
+
+                        {% elif graph.color == "#30a14e": %}
+                        <div class="contribution-max"></div>
+
+                        {% endif %}
+                        {% endfor %}
+                        {% endfor %}
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="contribution-highlights">
+
+                <div class = "repository-count-card">Repository Count<span class = "contribution-highlight-number">{{contribution_highlights[0]}}</span></div>
+                <div class = "total-stars-card">⭐ Total Stars <span class = "contribution-highlight-number">{{contribution_highlights[1]}}</span> </div>
+                <div class = "total-forks-card">Total Forks <span class = "contribution-highlight-number">{{contribution_highlights[2]}}</span></div>
+                <div class = "total-contributions-card">Total Contributions <span class = "contribution-highlight-number">{{contribution_highlights[3]}}</span></div>
+
+            </div>
+
+            <div class="view-github-profile">
+                <button class = "github-profile-button">View GitHub Profile</button>
+            </div>
 
         </div>
+
 
     </div>
 

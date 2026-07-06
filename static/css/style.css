@@ -806,13 +806,13 @@ body{
 
 
 /* ==========================================
-   Featured Project Section : Media Query
+   Featured Project Section
 ========================================== */
 
 
 .title-featured-projects{
 
-    margin-top: 6%;
+    margin-top: 5%;
     color: #333333;
     font-weight:800;
 }
@@ -932,4 +932,79 @@ body{
 
 }
 
+
+/* ==========================================
+   Github Graph Section
+========================================== */
+
+.github-graph{
+
+    margin-top: 5%;
+    color: #333333;
+    font-weight:800;
+
+}
+
+
+.graph-container-grid{
+
+    display: grid;
+    grid-template-columns: repeat(54, 10px);
+    grid-template-rows: repeat(7, 10px);
+    grid-auto-flow: column;
+    gap: 5px;
+
+}
+
+
+
+.contribution-none{
+
+    width: 10px;
+    height:10px;
+    background-color: #E9E9E9;
+    border-radius: 2px;
+
+
+}
+
+
+.contribution-low{
+
+    width: 10px;
+    height:10px;
+    background-color: #FFF8D6;
+    border-radius: 2px;
+
+}
+
+
+.contribution-medium{
+
+    width: 10px;
+    height:10px;
+    background-color: #FFEFA3;
+    border-radius: 2px;
+
+
+}
+
+
+.contribution-high{
+
+    width: 10px;
+    height:10px;
+    background-color: #FFE066;
+    border-radius: 2px;
+
+}
+
+.contribution-max{
+
+    width: 10px;
+    height:10px;
+    background-color: #FFD43B;
+    border-radius: 2px;
+
+}
 

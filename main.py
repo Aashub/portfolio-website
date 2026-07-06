@@ -2,21 +2,61 @@ from flask import Flask, render_template, request
 import requests
 import os
 from github_graph import GithubData
-
-
-fetch_data = GithubData()
-
-response_status = fetch_data.checking_response()
-
-if response_status == 0:
-    repo_count, overall_stars, overall_forks, overall_contribution = fetch_data.fetching_required_data()
-
-elif response_status == 1:
-    print("please check the above error")
+from data import github_data
+from datetime import date, datetime
 
 
 
-def send_mail(message_data) :
+# repository count
+repository_count = github_data["data"]["viewer"]["repositories"]["totalCount"]
+
+# to get total stars
+total_stars = sum([star["stargazerCount"] for star in github_data["data"]["viewer"]["repositories"]["nodes"]])
+
+# to total forks
+total_forks = sum([star["forkCount"] for star in github_data["data"]["viewer"]["repositories"]["nodes"]])
+
+# total Contribution
+total_contribution = github_data["data"]["viewer"]["contributionsCollection"]["contributionCalendar"][
+    "totalContributions"]
+
+graph_contribution_list = github_data["data"]["viewer"]["contributionsCollection"]["contributionCalendar"]["weeks"]
+
+
+month_label_list = []
+
+for week in graph_contribution_list:
+    first_day = week["contributionDays"][0]["date"]
+
+    formated_date = datetime.strptime(first_day, "%Y-%m-%d") # converting each week first date into datetime format
+    month = formated_date.strftime("%b") # changing the formated date into this format "Jul Aug"
+
+    if month not in month_label_list:
+        month_label_list.append(month)
+
+    else:
+        month_label_list.append("")
+
+
+
+response_list = [repository_count, total_stars, total_forks, total_contribution]
+
+
+# fetch_data = GithubData()
+#
+# print(fetch_data.response.json())
+# response_status = fetch_data.checking_response()
+#
+# if response_status == 0:
+#     repo_count, overall_stars, overall_forks, overall_contribution, graph_contribution_list = fetch_data.fetching_required_data()
+#     response_list = [repo_count, overall_stars, overall_forks, overall_contribution]
+#
+# elif response_status == 1:
+#     print("please check the above error")
+
+
+
+def send_mail(message_data):
     """this function will create the secure connection between sender and receiver using smtp module and take input of weather condition and send the mail."""
 
     smtp_server = "smtp.gmail.com"
@@ -35,11 +75,8 @@ app = Flask(__name__)
 def home():
     """the decorator and this function will help in render the home page of website."""
 
-    return render_template("index.html")
-
-
-
+    return render_template("index.html", contribution_highlights = response_list, contribution_graph = graph_contribution_list, num_of_weeks = len(graph_contribution_list), months_label = month_label_list)
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port= 5001)
+    app.run(debug=True, port=5001)

@@ -255,7 +255,7 @@
     <div class="container">
         <h2 class="title-featured-projects">Featured Projects</h2>
         <p class="description-featured-projects">Here are some of the projects I've worked on, showcasing my skills in
-             various technologies and problem
+            various technologies and problem
             domains.</p>
 
 
@@ -355,8 +355,50 @@
 
 <!-- ================= PROJECT SECTION ================= -->
 
+<!-- ================= GITHUB CONTRIBUTION SECTION ================= -->
 
-<!-- Github -->
+<section>
+
+    <div class="container">
+
+        <h2 class="github-graph">GitHub Activity</h2>
+
+        <div class="graph-container-grid">
+
+            {% for week in range(num_of_weeks) %}
+            {% for graph in contribution_graph[week]["contributionDays"] %}
+
+            {% if graph.color == "#ebedf0": %}
+            <div class="contribution-none"></div>
+
+            {% elif graph.color == "#216e39": %}
+            <div class="contribution-low"></div>
+
+            {% elif graph.color == "#9be9a8": %}
+            <div class="contribution-medium"></div>
+
+            {% elif graph.color == "#40c463": %}
+            <div class="contribution-high"></div>
+
+            {% elif graph.color == "#30a14e": %}
+            <div class="contribution-max"></div>
+
+            {% endif %}
+
+            {% endfor %}
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- ================= GITHUB CONTRIBUTION SECTION ================= -->
+
+
 <!-- Tech Stack -->
 <!-- Contact -->
 

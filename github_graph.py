@@ -21,7 +21,7 @@ query = """{
       contributionCalendar {
         weeks{
             contributionDays{
-                color, contributionCount, contributionLevel
+                color, contributionCount, contributionLevel, date
             }
         }
       }
@@ -81,4 +81,10 @@ class GithubData:
         total_contribution = github_data["data"]["viewer"]["contributionsCollection"]["contributionCalendar"][
             "totalContributions"]
 
-        return repository_count, total_stars, total_forks, total_contribution
+        # graph contribution data
+        graph_contribution_data = github_data["data"]["viewer"]["contributionsCollection"]["contributionCalendar"]["weeks"]
+
+        return repository_count, total_stars, total_forks, total_contribution, graph_contribution_data
+
+
+

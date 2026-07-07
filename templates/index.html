@@ -422,16 +422,25 @@
 
             <div class="contribution-highlights">
 
-                <div class = "repository-count-card">Repository Count<span class = "contribution-highlight-number">{{contribution_highlights[0]}}</span></div>
-                <div class = "total-stars-card">⭐ Total Stars <span class = "contribution-highlight-number">{{contribution_highlights[1]}}</span> </div>
-                <div class = "total-forks-card">Total Forks <span class = "contribution-highlight-number">{{contribution_highlights[2]}}</span></div>
-                <div class = "total-contributions-card">Total Contributions <span class = "contribution-highlight-number">{{contribution_highlights[3]}}</span></div>
+                <div class="repository-count-card">Repository Count <span class="repository-count-number">{{contribution_highlights[0]}}</span>
+                </div>
+
+
+                <div class="total-forks-card">Total Forks<span
+                        class="total-forks-number">{{contribution_highlights[2]}}</span></div>
+                <div class="total-stars-card"><i class="bi bi-star-fill"></i>Total Stars<span
+                        class="total-stars-number">{{contribution_highlights[1]}}</span>
+                </div>
+
+                <div class="total-contributions-card">Total Contributions <span class="total-contributions-card-number">&nbsp;{{contribution_highlights[3]}}</span>
+                </div>
 
             </div>
 
             <div class="view-github-profile">
-                <button class = "github-profile-button">View GitHub Profile</button>
+                <a href="#" class="btn btn-primary view-github-profile-btn">View Github Profile</a>
             </div>
+
 
         </div>
 

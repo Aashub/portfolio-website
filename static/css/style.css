@@ -905,7 +905,6 @@ body{
 .show-more-projects-btn{
 
     background: white;
-    #color: #333333;
     margin-bottom: 15px;
     border-radius: 12px;
     border-color: #333333;
@@ -1079,10 +1078,12 @@ body{
 .contribution-highlights{
 
     color: #333333;
-    display: flex;
-    gap: 5%;
-    padding-left: 35px;
     margin-bottom: 3%;
+    padding-left:35px;
+    gap: 0.4%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
 
 }
 
@@ -1090,11 +1091,185 @@ body{
 .repository-count-card, .total-stars-card, .total-forks-card, .total-contributions-card{
 
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
+    display: flex;
+    gap: 5px;
+
+
+}
+
+.repository-count-number, .total-stars-number, .total-forks-number{
+
+    font-size: 11px;
+    font-weight: 600;
+    color: #FFD43B;
+    display:flex;
+    background:#333333;
+    width: 22px;
+    height: 22px;
+    align-items: center;
+    border-radius: 50%;
+    justify-content:center;
+
+}
+
+.total-contributions-card-number{
+
+
+    font-size: 9px;
+    font-weight: 600;
+    color: #FFD43B;
+    display:flex;
+    background:#333333;
+    width: 22px;
+    height: 22px;
+    align-items: center;
+    border-radius: 50%;
+    gap:20px;
+
 }
 
 
-.github-profile-button{
+.view-github-profile{
+    margin-top: 5%;
+    margin-bottom: 1.5%;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+
+
+}
+
+.view-github-profile-btn{
 
     background: #333333;
+    #color: #F7F7F7;
+    border-radius: 10px;
+    border-color: #333333;
+    font-size: 13px;
+
+}
+
+.view-github-profile-btn:hover{
+
+    background:#F7F7F7;
+    color:#333333;
+    transform: scale(1.02);
+    border-color: #333333;
+
+}
+
+.bi-star-fill{
+
+    color: #FFD43B;
+
+}
+
+
+/* ==========================================
+   Github Contribution Graph section : Media Query
+========================================== */
+
+@media (max-width: 991.98px){
+
+    .contribution-highlights{
+        margin-top: 4%;
+        grid-template-columns: repeat(2, 1fr);
+         gap: 10px;           /* Horizontal and vertical gap */
+    }
+
+
+    .view-github-profile{
+
+        justify-content: left;
+        margin-left: 33px;
+
+    }
+
+}
+
+
+@media (max-width: 575.98px){
+
+    .contribution-highlights{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .repository-count-card, .total-stars-card, .total-forks-card, .total-contributions-card{
+
+    font-size: 13px;
+    font-weight: 500;
+    gap: 5px;
+
+
+    }
+
+
+    .repository-count-number, .total-stars-number, .total-forks-number{
+
+    font-size: 10px;
+    font-weight: 500;
+    width: 20px;
+    height: 20px;
+
+
+    }
+
+.total-contributions-card-number{
+
+
+    font-size: 8px;
+    font-weight: 500;
+    width: 20px;
+    height: 20px;
+
+
+    }
+
+}
+
+
+@media (max-width: 404.98px){
+
+    .contribution-highlights{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .repository-count-card, .total-stars-card, .total-forks-card, .total-contributions-card{
+
+    font-size: 13px;
+    font-weight: 500;
+    gap: 5px;
+
+
+    }
+
+
+    .repository-count-number, .total-stars-number, .total-forks-number{
+
+    font-size: 10px;
+    font-weight: 500;
+    width: 20px;
+    height: 20px;
+
+
+    }
+
+.total-contributions-card-number{
+
+    font-size: 8px;
+    font-weight: 500;
+    width: 20px;
+    height: 20px;
+
+    }
+
+    .view-github-profile{
+
+        margin-top: 8%;
+
+    }
+
 }

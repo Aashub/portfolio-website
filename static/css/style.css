@@ -824,8 +824,6 @@ body{
     padding-bottom: 1.9%;
     max-width: 700px;
 
-
-
 }
 
 
@@ -1166,6 +1164,9 @@ body{
 }
 
 
+
+
+
 /* ==========================================
    Github Contribution Graph section : Media Query
 ========================================== */
@@ -1272,4 +1273,39 @@ body{
 
     }
 
+}
+
+
+/* ==========================================
+   Tech Stack section
+========================================== */
+
+
+
+.tech-stack{
+
+    margin-top: 5%;
+    color: #333333;
+    font-weight:800;
+
+}
+
+
+.description-tech-stack{
+
+    color: #333333;
+    font-weight:600;
+    padding-bottom: 1.9%;
+    max-width: 575px;
+
+}
+
+.tech-stack-card-container{
+
+margin-bottom: 5%;
+}
+
+.tech-stack-card{
+
+    margin-bottom: 5%;
 }

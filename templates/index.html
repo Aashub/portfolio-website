@@ -394,19 +394,24 @@
                         {% for graph in contribution_graph[week]["contributionDays"] %}
 
                         {% if graph.color == "#ebedf0": %}
-                        <div class="contribution-none"></div>
+                        <div class="contribution-none contribution-cell"
+                             data-tooltip="{{ graph.contributionCount }} contributions on {{ graph.date }}"></div>
 
                         {% elif graph.color == "#216e39": %}
-                        <div class="contribution-low"></div>
+                        <div class="contribution-low contribution-cell"
+                             title="{{ graph.contributionCount }} contributions on {{ graph.date }}"></div>
 
                         {% elif graph.color == "#9be9a8": %}
-                        <div class="contribution-medium"></div>
+                        <div class="contribution-medium contribution-cell"
+                             title="{{ graph.contributionCount }} contributions on {{ graph.date }}"></div>
 
                         {% elif graph.color == "#40c463": %}
-                        <div class="contribution-high"></div>
+                        <div class="contribution-high contribution-cell"
+                             title="{{ graph.contributionCount }} contributions on {{ graph.date }}"></div>
 
                         {% elif graph.color == "#30a14e": %}
-                        <div class="contribution-max"></div>
+                        <div class="contribution-max  contribution-cell"
+                             title="{{ graph.contributionCount }} contributions on {{ graph.date }}"></div>
 
                         {% endif %}
                         {% endfor %}
@@ -454,7 +459,112 @@
 <!-- ================= GITHUB CONTRIBUTION SECTION ================= -->
 
 
-<!-- Tech Stack -->
+<!-- ================= Tech Stack SECTION ================= -->
+
+
+<section>
+
+    <div class="container">
+        <h2 class="tech-stack">Tech Stack</h2>
+        <p class="description-tech-stack">A collection of languages, frameworks, databases, and development tools I use
+            to create fast, reliable, and scalable software solutions.</p>
+
+        <div class="tech-stack-card-container">
+            <div class="row ">
+                <div class=" col-lg-4">
+
+                    <div class="card tech-stack-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Core Technologies</h5>
+                            <span class="badge rounded-pill me-2 mb-2">Python</span>
+                            <span class="badge rounded-pill me-2 mb-2">HTML5</span>
+                            <span class="badge rounded-pill me-2 mb-2">CSS3</span>
+                            <br>
+                            <span class="badge rounded-pill me-2 mb-2">Bootstrap</span>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class=" col-lg-4">
+
+                    <div class="card tech-stack-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Backend Development</h5>
+
+                            <span class="badge rounded-pill me-2 mb-2">Flask</span>
+                            <span class="badge rounded-pill me-2 mb-2">RESTful API</span>
+                            <span class="badge rounded-pill me-2 mb-2">SQLAlchemy</span>
+                            <span class="badge rounded-pill me-2 mb-4">Jinja2</span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class=" col-lg-4">
+
+                    <div class="card tech-stack-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tools</h5>
+
+                            <span class="badge rounded-pill me-2 mb-2">Git</span>
+                            <span class="badge rounded-pill me-2 mb-2">PyCharm</span>
+                            <span class="badge rounded-pill me-2 mb-2">VS Code</span>
+                            <span class="badge rounded-pill me-2 mb-2">Postman</span>
+                            <span class="badge rounded-pill me-2 mb-2">Figma</span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class=" col-lg-4">
+
+                    <div class="card tech-stack-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Databases</h5>
+
+                            <span class="badge rounded-pill me-2 mb-4">SQLite</span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class=" col-lg-4">
+
+                    <div class="card tech-stack-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Platforms
+                            </h5>
+
+                            <span class="badge rounded-pill me-2 mb-2">Github</span>
+                            <span class="badge rounded-pill me-2 mb-2">Vercel</span>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= Tech Stack SECTION ================= -->
+
+
 <!-- Contact -->
 
 

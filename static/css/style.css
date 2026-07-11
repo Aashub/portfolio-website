@@ -867,7 +867,6 @@ body{
     background: #FFD43B;
     color: #333333;
     font-size: 13px;
-
     padding: 8px 14px;
 }
 
@@ -1308,4 +1307,41 @@ margin-bottom: 5%;
 .tech-stack-card{
 
     margin-bottom: 5%;
+    background-color: #333333;
+    border: 2px solid #FFD43B;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
 }
+
+
+.tech-stack-card:hover{
+
+     transform: translateY(-7px);
+
+
+}
+
+
+.tech-stack-badge{
+
+
+    font-size: 14px;
+    padding: 10px 16px;
+    transition: transform 0.3s ease;
+
+}
+
+.tech-stack-badge:hover{
+
+    transform: scale(1.03);
+
+
+}
+
+
+.tech-stack-card-title{
+
+   color: white;
+
+}
+

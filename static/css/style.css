@@ -355,37 +355,25 @@ body{
 ========================================== */
 
 
+.highlight-container{
+
+    margin-top: 57px;
+}
+
+
+
 .highlight-items{
-    display:flex;
-    align-items:center;
 
-    gap: 10px;
-
-    color:#fff;
-    font-size:15px;
-    font-weight:700;
-
-    margin-top:20px;
-}
-
-.open-to-work {
-
-    transform: translateX(70px);
-
-}
-
-.career-switcher {
-
-    transform: translateX(40px);
+    white-space: nowrap;
 
 }
 
 
-.self-taught-dev{
+.highlights-text, .highlights-icon{
 
-    transform: translate(-10px);
+    transform: translateY(20px);
+
 }
-
 
 .highlights-icon{
 
@@ -398,26 +386,13 @@ body{
 }
 
 
-.highlights-text{
-    white-space: nowrap;
-}
 
-.highlight-container{
 
-     margin-top: 40px;
-}
 
 
 /* ==========================================
    Hero Section : Media Query
 ========================================== */
-
-
-@media (max-width: 575.98px){
-    .self-taught-dev{
-        transform: none;
-    }
-}
 
 
 
@@ -451,9 +426,35 @@ body{
     font-size:1.06rem;
     }
 
-    .open-to-work{
-        transform: translateX(40px);
+    .highlight-container{
+
+        margin-top: 12px;
+
     }
+
+
+
+    .highlight-items{
+
+        transform: translateY(30px);
+    }
+
+    .projects-100{
+
+        transform: translateY(28px);
+    }
+
+    .career-switcher{
+
+          transform: translateY(40px);
+    }
+
+    .open-to-work{
+
+          transform: translateX(-8px) translateY(40px);
+    }
+
+
 
 
 }
@@ -501,34 +502,19 @@ body{
     font-weight:500;
     }
 
+    .highlight-items{
 
-    .highlights-items{
-        flex-wrap: wrap;
-        justify-content: center;
-
-    }
-
-    .projects-100{
         transform: translateY(15px);
     }
 
-
-    .lifelong-learner{
-        transform: translateX(90px) translateY(15px);
-    }
-
-
-    .self-taught-dev{
-        transform: translateX(20px) translateY(15px);
-    }
-
     .career-switcher{
-        transform: translateX(110px) translateY(30px);
-    }
 
+            transform: translateY(25px);
+    }
 
     .open-to-work{
-        transform: translateX(80px) translateY(30px);
+
+            transform: translateX(-7px) translateY(25px);
     }
 
 
@@ -600,38 +586,20 @@ body{
     font-weight:500;
     }
 
-    .highlight-container {
-    transform:  translateY(-40px);
-    }
-
-    .highlights-text{
-        font-size:13px;
-        font-weight:700;
-    }
-
-
-    .projects-100{
-        transform: translateY(5px);
-    }
-
-
-    .lifelong-learner{
-        transform: translateX(50px) translateY(5px);
-        margin-left:-14px;
-    }
-
-
-    .self-taught-dev{
-        transform: translateX(5px) translateY(5px);
-    }
-
-    .career-switcher{
-        transform: translateX(70px) translateY(30px);
-    }
-
 
     .open-to-work{
-        transform: translateX(140px) translateY(30px);
+
+        transform: translateX(20px) translateY(15px);
+    }
+
+    .self-taught-dev{
+        transform: translateX(39px) translateY(25px);
+    }
+
+    .highlight-container{
+
+    margin-top: -20px;
+
     }
 
 
@@ -694,14 +662,6 @@ body{
 
 
 
-@media (max-width:576px){
-
-    .lifelong-learner{
-        margin-left:-14px;
-    }
-
-}
-
 
 @media (max-width:575.98px){
 
@@ -710,42 +670,84 @@ body{
     .hero-image{
         width: 200px;
         height: 200px;
-        transform: rotate(8deg) translate(1px, -20px);
+        transform: rotate(8deg) translate(-5px, -20px);
 
     }
 
-    .highlights-text{
-        font-size:12px;
-        font-weight:700;
+
+    .hero-image-wrapper{
+        margin-top:10px;
     }
 
 
-    .projects-100{
-        transform: translateX(18%);
+        .contribution-highlights{
+        grid-template-columns: repeat(2, 1fr);
 
     }
 
+    .repository-count-card, .total-stars-card, .total-forks-card, .total-contributions-card{
+
+    font-size: 13px;
+    font-weight: 500;
+    gap: 5px;
+
+
+    }
+
+
+    .repository-count-number, .total-stars-number, .total-forks-number{
+
+    font-size: 10px;
+    font-weight: 500;
+    width: 20px;
+    height: 20px;
+
+
+    }
+
+    .total-contributions-card-number{
+
+
+    font-size: 8px;
+    font-weight: 500;
+    width: 20px;
+    height: 20px;
+
+
+    }
 
     .open-to-work{
-        transform: translateX(60%) translateY(-210%);
-        margin-right:10px;
-    }
 
+    transform: translateX(10px) translateY(25px);
 
-    .lifelong-learner{
-        transform: translateX(18%) translateY(-200%);
-
-    }
-
-    .career-switcher{
-        transform: translateX(58%) translateY(-410%);
-        margin-right-10px;
     }
 
     .self-taught-dev{
-        transform: translateX(32.5%) translateY(-380%);
 
+        transform: translateX(35px) translateY(32px);
     }
+
+    .projects-100{
+        transform:  translateY(17px);
+    }
+
+    .career-switcher{
+        transform: translateY(25px) translateX(2px);
+    }
+
+    .highlights-text{
+
+        font-size: 14px;
+    }
+
+    .highlight-container{
+
+        margin-top: -5px;
+    }
+
+
+
+
 }
 
 
@@ -769,39 +771,13 @@ body{
 
     }
 
+    .highlight-container{
 
-    .highlights-text{
-        font-size:11px;
-        font-weight:700;
+        margin-top: -30px;
     }
 
 
-    .projects-100{
-        transform: translateX(10%);
 
-    }
-
-
-    .open-to-work{
-        transform: translateX(60%) translateY(-220%);
-        margin-right:10px;
-    }
-
-
-    .lifelong-learner{
-        transform: translateX(10%) translateY(-200%);
-
-    }
-
-    .career-switcher{
-        transform: translateX(56%) translateY(-420%);
-        margin-right-10px;
-    }
-
-    .self-taught-dev{
-        transform: translateX(28%) translateY(-380%);
-
-    }
 }
 
 
@@ -1189,45 +1165,6 @@ body{
 }
 
 
-@media (max-width: 575.98px){
-
-    .contribution-highlights{
-        grid-template-columns: repeat(2, 1fr);
-
-    }
-
-    .repository-count-card, .total-stars-card, .total-forks-card, .total-contributions-card{
-
-    font-size: 13px;
-    font-weight: 500;
-    gap: 5px;
-
-
-    }
-
-
-    .repository-count-number, .total-stars-number, .total-forks-number{
-
-    font-size: 10px;
-    font-weight: 500;
-    width: 20px;
-    height: 20px;
-
-
-    }
-
-.total-contributions-card-number{
-
-
-    font-size: 8px;
-    font-weight: 500;
-    width: 20px;
-    height: 20px;
-
-
-    }
-
-}
 
 
 @media (max-width: 404.98px){
@@ -1407,4 +1344,23 @@ margin-bottom: 5%;
     color: #F7F7F7;
 
 
+}
+
+@media (max-width: 991.98px){
+
+    .footer-links{
+
+      display: flex;
+      justify-content: flex-start; /* Aligns children to the right */
+
+    }
+}
+
+@media (max-width: 991.98px){
+
+    .footer-copyright{
+
+     margin-top:10px;
+
+    }
 }

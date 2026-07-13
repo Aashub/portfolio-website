@@ -790,7 +790,7 @@ body{
 
 .title-featured-projects{
 
-    margin-top: 5%;
+    margin-top: 5.1%;
     color: #333333;
     font-weight:800;
 }
@@ -885,7 +885,6 @@ body{
     border-color: #333333;
     font-weight: 500;
     color: #333333;
-
 
 }
 
@@ -1431,7 +1430,10 @@ margin-bottom: 5%;
 
 }
 
+.my-projects-container{
 
+    padding: 100px;
+}
 
 /* ==========================================
    Projects Section Media Query
@@ -1464,6 +1466,9 @@ margin-bottom: 5%;
     margin-top: 140px;
     margin-left: 15px;
     }
+
+
+
 }
 
 
@@ -1566,4 +1571,25 @@ margin-bottom: 5%;
 
 .number {
     color: #B5CEA8;
+}
+
+.browse-all-projects-btn{
+    margin-top: 5px;
+    margin-bottom: 5%;
+    background: white;
+    border-radius: 12px;
+    border-color: #333333;
+    font-weight: 500;
+    color: #333333;
+
+
+}
+
+.browse-all-projects-btn:hover{
+
+    background:#333333;
+    color: white;
+    transform: scale(1.02);
+    border-color: #333333;
+
 }

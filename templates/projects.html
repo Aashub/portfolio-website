@@ -1,0 +1,78 @@
+{% include "header.html" %}   <!-- jinja template for header-->
+
+<!-- Page Header-->
+<header>
+
+    <section id="home" class="hero">
+
+        <!-- Animated Binary Background -->
+        <canvas id="binaryCanvas"></canvas>
+
+
+        <!-- ADD THIS: Faded overlay for the vignette effect -->
+        <div class="fade-overlay"></div>
+
+
+        <div class="container">
+
+            <div class="row ">
+
+                <div class="col-xl-6 col-lg-6 ">
+
+                    <div class = "projects-hero-text  pt-xl-5 pt-lg-1 justify-content-end ">
+                        <h1 class="My-projects-color">My <span class = "projects-color">Projects</span></h1>
+                        <p class="projects-hero-desc ">Explore a collection of projects showcasing my expertise in Python,
+                            Flask,
+                            REST
+                            APIs, automation, web
+                            development, and problem-solving through practical, real-world applications.</p>
+                    </div>
+                </div>
+
+                <div class=" col-xl-6 col-lg-6 ">
+                    <div class="  card  card-layout ">
+                        <div class="card-body">
+             <pre><code><span class="comment"># portfolio.py</span>
+
+<span class="keyword">class</span> <span class="class-name">Portfolio</span>:
+
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="self">self</span>):
+        <span class="self">self</span>.primary_language = <span class="string">"Python"</span>
+        <span class="self">self</span>.framework = <span class="string">"Flask"</span>
+        <span class="self">self</span>.database = <span class="string">"SQLite"</span>
+        <span class="self">self</span>.projects = <span class="number">100</span>
+        <span class="self">self</span>.focus = [
+            <span class="string">"Web Development"</span>, <span class="string">"REST APIs"</span>,
+            <span class="string">"Automation"</span>, <span class="string">"Problem Solving"</span>
+        ]
+        <span class="self">self</span>.goal = <span class="string">"Learn continuously, build meaningful projects,</span>
+                     <span class="string">and grow as a developer"</span>
+
+    <span class="keyword">def</span> <span class="function">mission</span>(<span class="self">self</span>):
+        <span class="keyword">return</span> <span class="string">"Building practical software that solves real-world problems."</span>
+</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="for-col-alignment">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</header>
+
+
+<!-- main content-->
+<main>
+
+
+</main>
+
+
+{% include "footer.html" %}     <!-- jinja template for footer-->

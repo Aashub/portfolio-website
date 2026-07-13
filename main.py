@@ -5,8 +5,6 @@ from github_graph import GithubData
 from data import github_data
 from datetime import date, datetime
 
-
-
 # repository count
 repository_count = github_data["data"]["viewer"]["repositories"]["totalCount"]
 
@@ -22,22 +20,19 @@ total_contribution = github_data["data"]["viewer"]["contributionsCollection"]["c
 
 graph_contribution_list = github_data["data"]["viewer"]["contributionsCollection"]["contributionCalendar"]["weeks"]
 
-
 month_label_list = []
 
 for week in graph_contribution_list:
     first_day = week["contributionDays"][0]["date"]
 
-    formated_date = datetime.strptime(first_day, "%Y-%m-%d") # converting each week first date into datetime format
-    month = formated_date.strftime("%b") # changing the formated date into this format "Jul Aug"
+    formated_date = datetime.strptime(first_day, "%Y-%m-%d")  # converting each week first date into datetime format
+    month = formated_date.strftime("%b")  # changing the formated date into this format "Jul Aug"
 
     if month not in month_label_list:
         month_label_list.append(month)
 
     else:
         month_label_list.append("")
-
-
 
 response_list = [repository_count, total_stars, total_forks, total_contribution]
 
@@ -55,7 +50,6 @@ response_list = [repository_count, total_stars, total_forks, total_contribution]
 #     print("please check the above error")
 
 
-
 def send_mail(message_data):
     """this function will create the secure connection between sender and receiver using smtp module and take input of weather condition and send the mail."""
 
@@ -71,11 +65,30 @@ def send_mail(message_data):
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home():
     """the decorator and this function will help in render the home page of website."""
 
-    return render_template("index.html", contribution_highlights = response_list, contribution_graph = graph_contribution_list, num_of_weeks = len(graph_contribution_list), months_label = month_label_list)
+    return render_template("index.html", contribution_highlights=response_list,
+                           contribution_graph=graph_contribution_list, num_of_weeks=len(graph_contribution_list),
+                           months_label=month_label_list, current_page = True)
+
+
+@app.route('/projects', methods=['GET'])
+def projects():
+    return render_template("projects.html")
+
+
+@app.route('/about_me', methods=['GET'])
+def about_me():
+    return render_template("about.html")
+
+
+@app.route('/contact', methods=['GET'])
+def contact():
+    return render_template("contact.html")
+
+
 
 
 if __name__ == "__main__":

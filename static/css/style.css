@@ -1593,3 +1593,81 @@ margin-bottom: 5%;
     border-color: #333333;
 
 }
+
+
+
+/* ==========================================
+   About Me Section
+========================================== */
+
+
+.parent-tag-about-me{
+
+    margin-left: 10px;
+    margin-top: 70px;
+    max-width: 900px;
+}
+
+.aboutme-highlight-text{
+
+    font-weight: 700;
+    color: #FFD43B;
+
+
+}
+
+.aboutme-non-highlight-text{
+
+    font-weight: 500;
+    color: #F7F7F7;
+
+}
+
+.about-text{
+
+    color: #FFD43B;
+    font-weight: 800;
+    font-size: 45px;
+
+}
+
+.Me-text{
+
+    color: #F7F7F7;
+}
+
+.aboutme-pg{
+
+    font-weight: 400;
+    color: white;
+}
+
+
+
+
+/* ==========================================
+   About Me Section Media Query
+========================================== */
+
+
+@media (max-width:767.98px){
+
+    .aboutme-pg{
+
+        font-size: 15px;
+        font-weight: 450;
+
+    }
+
+}
+
+@media (max-width:575.98px){
+
+    .aboutme-pg{
+
+        font-size: 14px;
+        font-weight: 450;
+
+    }
+
+}

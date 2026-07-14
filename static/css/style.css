@@ -1629,6 +1629,7 @@ margin-bottom: 5%;
     font-weight: 800;
     font-size: 45px;
 
+
 }
 
 .Me-text{
@@ -1640,14 +1641,149 @@ margin-bottom: 5%;
 
     font-weight: 400;
     color: white;
+    text-align: justify;
+}
+
+
+.title-professional-journey{
+
+    margin-top: 5.1%;
+
+    color: #333333;
+    font-weight:800;
+
+}
+
+.job-title, .degree-title{
+
+        color: #333333;
+        font-weight: 800;
+
+
+}
+
+
+.job-details, .educational-details{
+
+        color: #333333;
+
+}
+
+.organization-name{
+
+    font-weight: 800;
+
+}
+
+.job-description, .education-description{
+
+    text-align: justify;
+}
+
+.mortarboard-icon, .briefcase-icon{
+
+        color: #333333;
+        font-size: 1.4rem;
+        transition: transform 0.3s ease;
+
+}
+
+.job-period-date-1., job-period-date-2, .education-period-date{
+
+        color: #333333;
+        font-weight: 550;
+
+
+}
+
+.icon-design{
+
+    width: 50px;
+    height: 50px;
+    transform: translateX(-15px) translateY(-13px);
+    margin-left: 10px;
+
+
+    background: #FFD43B;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+
 }
 
 
 
+.icon-design::after {
+    content: "";
+    position: absolute;
+
+    width: 2.5px;
+    height: 214px;      /* Distance to next icon */
+
+    background: #333333;
+
+    left: 50%;
+    top: 100%;
+
+    transform: translateX(-50%);
+}
+
+.mobile-date{
+
+    display: none;
+}
 
 /* ==========================================
    About Me Section Media Query
 ========================================== */
+
+
+@media (max-width: 1999.98px){
+
+
+    .icon-design::after {
+
+
+    width: 2.5px;
+    height: 234px;      /* Distance to next icon */
+
+
+    }
+
+}
+
+
+@media (max-width: 990.98px){
+
+
+    .icon-design::after {
+
+
+    width: 2.5px;
+    height: 260px;      /* Distance to next icon */
+
+
+    }
+
+
+    .education-period-date{
+
+        transform: translateY(1.4px);
+
+    }
+
+    .job-period-date-1{
+
+        transform: translateY(3px);
+
+    }
+
+}
 
 
 @media (max-width:767.98px){
@@ -1656,6 +1792,33 @@ margin-bottom: 5%;
 
         font-size: 15px;
         font-weight: 450;
+
+    }
+
+    .icon-design::after {
+
+
+    width: 2.5px;
+    height: 400px;      /* Distance to next icon */
+
+
+    }
+
+
+    .education-period-date {
+
+        transform: translateY(-10px);
+    }
+
+    .job-period-date-2{
+
+            transform: translateY(0.5px);
+
+    }
+
+    .job-period-date-1{
+
+            transform: translateY(1.6px);
 
     }
 
@@ -1670,4 +1833,66 @@ margin-bottom: 5%;
 
     }
 
+    .job-description, .education-description{
+
+        font-size: 15px;
+        margin-right: 15px;
+
+
+    }
+
+
+    .job-period-date-2, .job-period-date-1, .education-period-date{
+
+        margin-right: 15px;
+
+    }
+
+
+
 }
+
+
+
+@media (max-width:514.20px){
+
+
+    .job-period-date-2, .job-period-date-1, .education-period-date{
+
+        display: none;
+
+    }
+
+    .mobile-date{
+
+        display: block;
+        transform: translateX(-15px);
+
+    }
+
+    .job-description, .education-description{
+
+        font-size: 14px;
+
+    }
+
+
+}
+
+
+@media (max-width:359.98px){
+
+
+    .icon-design::after {
+
+
+    width: 2.5px;
+    height: 460px;      /* Distance to next icon */
+
+
+    }
+
+
+
+}
+

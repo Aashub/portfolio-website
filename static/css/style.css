@@ -855,7 +855,7 @@ z
 .featured-github-button{
 
     background: #333333;
-    #color: #E5E7EB;
+    color: white;
     margin-bottom: 15px;
     border-radius: 10px;
     border-color: #333333;
@@ -1121,7 +1121,7 @@ z
 .view-github-profile-btn{
 
     background: #333333;
-    #color: #F7F7F7;
+    color: #F7F7F7;
     border-radius: 10px;
     border-color: #333333;
     font-size: 13px;

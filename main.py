@@ -71,7 +71,7 @@ def home():
 
     return render_template("index.html", contribution_highlights=response_list,
                            contribution_graph=graph_contribution_list, num_of_weeks=len(graph_contribution_list),
-                           months_label=month_label_list, current_page = True)
+                           months_label=month_label_list, current_page=True)
 
 
 @app.route('/projects', methods=['GET'])
@@ -84,11 +84,27 @@ def about_me():
     return render_template("about.html")
 
 
-@app.route('/contact', methods=['GET'])
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    """this route is responsible for rendering the contact page."""
+
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        subject = request.form['subject']
+        message = request.form['message']
+
+        message_data = f'Name: {name}\nEmail: {email}\nPhone_no: {subject}\nMessage: {message}'
+
+        send_mail(message_data)
+
+        msg = "successful"
+        return render_template("contact.html",
+                               successful_msg=msg)  # once the message sent successful this will render contact.html page and show succesful sent message
+
     return render_template("contact.html")
 
-
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":

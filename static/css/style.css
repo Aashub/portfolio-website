@@ -591,11 +591,11 @@ z
 
     .open-to-work{
 
-        transform: translateX(20px) translateY(15px);
+        transform: translateX(20px) translateY(1px);
     }
 
     .self-taught-dev{
-        transform: translateX(39px) translateY(25px);
+        transform: translateX(39px) translateY(10px);
     }
 
     .highlight-container{
@@ -665,11 +665,7 @@ z
 
 
 
-
-
-
 @media (max-width:575.98px){
-
 
 
     .hero-image{
@@ -685,7 +681,7 @@ z
     }
 
 
-        .contribution-highlights{
+    .contribution-highlights{
         grid-template-columns: repeat(2, 1fr);
 
     }
@@ -717,6 +713,12 @@ z
     width: 20px;
     height: 20px;
 
+
+    }
+
+    .lifelong-learner{
+
+    transform: translateY(17px);
 
     }
 
@@ -1397,7 +1399,7 @@ margin-bottom: 5%;
     font-size: 13.1px;
     border-radius: 20px;
 
-    transform: translateX(30px) translateY(90px) rotate(-1deg);
+    transform: translateX(30px) translateY(70px) rotate(-1deg);
     transition: transform 0.3s ease;
 
     box-shadow:
@@ -1411,15 +1413,16 @@ margin-bottom: 5%;
 
 .card-layout:hover{
 
-    transform: translateX(30px) translateY(90px) scale(1.015);
+    transform: translateX(30px) translateY(70px) scale(1.015);
 
 }
 
 .projects-hero-text{
 
-    margin-top: 150px;
-    margin-left: 60px;
+    margin-top: 140px;
+    margin-left: 10px;
     font-weight: 500;
+    margin-bottom: 140px;
 
 }
 
@@ -1472,7 +1475,7 @@ margin-bottom: 5%;
 
     .card-layout:hover{
 
-    transform: translateX(-10px) translateY(90px) scale(1.015);
+    transform: translateX(-10px) translateY(100px) scale(1.015);
 
     }
 
@@ -1620,7 +1623,8 @@ margin-bottom: 5%;
 .parent-tag-about-me{
 
     margin-left: 10px;
-    margin-top: 70px;
+    margin-top: 50px;
+    margin-bottom: 30px;
     max-width: 900px;
 }
 
@@ -1799,6 +1803,12 @@ margin-bottom: 5%;
 
     }
 
+    .parent-tag-about-me{
+
+        transform: translateY(20px);
+
+    }
+
 }
 
 
@@ -1917,9 +1927,6 @@ margin-bottom: 5%;
 ========================================== */
 
 
-.contact-hero {
-    min-height: 60vh;
-}
 
 
 .lets-connect-text{
@@ -1942,8 +1949,8 @@ margin-bottom: 5%;
 
 .parent-lets-connect{
 
-    margin-top: 80px;
-
+    margin-top: 100px;
+    margin-bottom: 60px;
 }
 
 

@@ -141,7 +141,7 @@ body{
 
     position: relative;
     padding: 100px 0 45px;
-    min-height: 90vh;
+
     background: #111111;
     overflow: hidden;
 
@@ -389,7 +389,6 @@ body{
 
 
 
-
 /* ==========================================
    Hero Section : Media Query
 ========================================== */
@@ -506,19 +505,20 @@ body{
 
     .highlight-items{
 
-        transform: translateY(15px);
+        transform: translateY(0px);
     }
+
 
     .career-switcher{
 
-            transform: translateY(25px);
+            transform: translateY(10px);
     }
 
     .open-to-work{
 
-            transform: translateX(-7px) translateY(25px);
+            transform: translateX(-7px) translateY(10px);
     }
-
+z
 
 }
 
@@ -666,6 +666,8 @@ body{
 
 
 
+
+
 @media (max-width:575.98px){
 
 
@@ -693,7 +695,6 @@ body{
     font-size: 13px;
     font-weight: 500;
     gap: 5px;
-
 
     }
 
@@ -749,9 +750,9 @@ body{
     }
 
 
-
-
 }
+
+
 
 
 @media (max-width:353.50px){
@@ -1166,6 +1167,17 @@ body{
 
 }
 
+@media (max-width:440.98px){
+
+    .contribution-highlights{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+}
+
+
+
 
 
 
@@ -1196,7 +1208,7 @@ body{
 
     }
 
-.total-contributions-card-number{
+    .total-contributions-card-number{
 
     font-size: 8px;
     font-weight: 500;

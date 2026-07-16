@@ -601,6 +601,7 @@ body{
     .highlight-container{
 
     margin-top: -20px;
+    margin-bottom: 30px;
 
     }
 
@@ -776,8 +777,8 @@ body{
     .highlight-container{
 
         margin-top: -30px;
-    }
 
+    }
 
 
 }
@@ -1406,6 +1407,7 @@ margin-bottom: 5%;
 
     margin-top: 150px;
     margin-left: 60px;
+    font-weight: 500;
 
 }
 
@@ -1413,6 +1415,7 @@ margin-bottom: 5%;
 
     font-size: 45px;
     color: #F7F7F7;
+    font-weight: 800;
 
 }
 
@@ -1420,6 +1423,7 @@ margin-bottom: 5%;
 
     color: #FFD43B;
     font-size: 45px;
+    font-weight: 800;
 
 }
 
@@ -1893,6 +1897,232 @@ margin-bottom: 5%;
     }
 
 
+}
+
+
+/* ==========================================
+   Contact Page CSS Section
+========================================== */
+
+
+.contact-hero {
+    min-height: 60vh;
+}
+
+
+.lets-connect-text{
+
+    font-size:3rem;
+    font-weight:800;
+    color: #E5E7EB;
 
 }
+
+
+.lets-connect-description{
+
+    font-size:1.4rem;
+    font-weight:600;
+    color:#F7F7F7;
+
+}
+
+
+.parent-lets-connect{
+
+    margin-top: 80px;
+
+}
+
+
+.contact-highlight-text{
+
+     color: #FFD43B;
+
+}
+
+
+.parent-contact-me-card{
+
+    margin-top: 5.1%;
+    margin-bottom: 5%;
+    border-radius: 20px;
+    background:   #333333;
+
+
+
+
+
+}
+
+.parent-contact-card-container{
+
+    border-radius: 20px;
+
+
+
+}
+
+.parent-contact-card-body{
+
+        border-radius: 20px;
+
+
+
+}
+
+.left-side-card{
+
+    background: #333333;
+
+}
+
+
+.card-title{
+
+
+    color: #333333;
+}
+
+.card-title-right{
+
+        color: #F7F7F7;
+
+}
+
+.form-body-text{
+
+    color:   #B8B8B8;
+
+}
+
+.form-control{
+
+    border-color: ;
+
+}
+
+.form-control::placeholder{
+    font-size: 13px;   /* 14px */
+}
+
+.right-side-link-text{
+
+    color: #B8B8B8;
+
+}
+
+
+.right-body-text{
+
+    color: #B8B8B8;
+}
+
+.right-side-link-text:hover{
+
+    color: #FFD43B;
+}
+
+.bi-clock {
+
+    color: #FFD43B;
+}
+
+.contact-btn-color{
+
+    background: #FFD43B;
+    border-radius: 10px;
+
+}
+
+
+.contact-btn-color:hover{
+
+    background: #333333;
+    border: 1px solid #333333;
+    color: #F7F7F7;
+
+}
+
+
+.thank-you-header{
+
+    color: #FFD43B;
+    font-weight: 800;
+}
+
+
+.thank-you-body{
+
+    color: #333333;
+    font-weight: 600;
+
+}
+
+
+
+/* ==========================================
+   Contact page : Media Query
+========================================== */
+
+
+@media (max-width: 1199.98px){
+
+
+
+    .parent-lets-connect{
+
+        margin-left: 5px;
+
+    }
+
+    .parent-contact-me-card{
+
+    margin-top: 7.1%;
+
+    }
+}
+
+
+
+@media (max-width: 992px){
+
+
+
+    .parent-lets-connect{
+
+        margin-top: 120px;
+
+    }
+
+
+        .parent-contact-me-card{
+
+    margin-top: 9.1%;
+
+    }
+
+}
+
+
+.@media (max-width: 575.98px){
+
+
+
+    .parent-lets-connect{
+
+        margin-top: 120px;
+
+    }
+
+
+    .parent-contact-me-card{
+
+        margin-top: 11.1%;
+
+    }
+
+
+}
+
 

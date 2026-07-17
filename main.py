@@ -1,9 +1,17 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session, redirect, url_for
 import requests
 import os
 from github_graph import GithubData
 from data import github_data
 from datetime import date, datetime
+from smtplib import SMTP
+from email.message import EmailMessage
+
+EMAIL = os.environ["EMAIL"]
+password = os.environ["PASSWORD"]
+PER_EMAIL = os.environ["PER_EMAIL"]
+SECRET_KEY = os.urandom(24).hex()
+
 
 # repository count
 repository_count = github_data["data"]["viewer"]["repositories"]["totalCount"]
@@ -50,20 +58,29 @@ response_list = [repository_count, total_stars, total_forks, total_contribution]
 #     print("please check the above error")
 
 
-def send_mail(message_data):
+def send_mail(message_data_dict):
     """this function will create the secure connection between sender and receiver using smtp module and take input of weather condition and send the mail."""
+
+    msg = EmailMessage()
+
+
+    msg["Subject"] = message_data_dict["subject"]
+    msg["From"] = EMAIL
+    msg["To"] = PER_EMAIL
+    msg["Reply-To"] = message_data_dict["email"]
+    msg.set_content(message_data_dict["message_content"])
 
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
     with SMTP(smtp_server, smtp_port) as connection:
         connection.starttls()
-        connection.login(user=EMAIL, password=PASSWORD)
-        connection.sendmail(from_addr=EMAIL, to_addrs=EMAIL,
-                            msg=f"Subject: New Message! \n\n{message_data}")
+        connection.login(user=EMAIL, password=password)
+
+        connection.send_message(msg)
 
 
 app = Flask(__name__)
-
+app.secret_key = SECRET_KEY
 
 @app.route('/', methods=['GET'])
 def home():
@@ -89,22 +106,26 @@ def contact():
     """this route is responsible for rendering the contact page."""
 
     if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        subject = request.form['subject']
-        message = request.form['message']
+        message_data_dict = {
 
-        message_data = f'Name: {name}\nEmail: {email}\nPhone_no: {subject}\nMessage: {message}'
+            "name": request.form['name'],
+            "email": request.form['email'],
+            "subject": request.form['subject'],
+            "message_content": request.form['message']
 
-        send_mail(message_data)
+        }
 
-        msg = "successful"
-        return render_template("contact.html",
-                               successful_msg=msg)  # once the message sent successful this will render contact.html page and show succesful sent message
+        send_mail(message_data_dict)
 
-    return render_template("contact.html")
+        # Setting a temporary flag in the session
 
-    return render_template("contact.html")
+        session['mail_sent'] = True
+        return redirect(url_for('contact'))  # once the message sent successful this will render contact.html page and show succesful sent message
+
+    # Check if the flag exists in the session
+    show_success = session.pop('mail_sent', False)
+
+    return render_template("contact.html", show_success = show_success)
 
 
 if __name__ == "__main__":

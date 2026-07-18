@@ -6,7 +6,7 @@ This is a personal portfolio website built with Flask that showcases my skills, 
 
 
 ## Website URL
-**https://portfolio-website-smoky-omega-92.vercel.app/contact**
+**https://portfolio-website-smoky-omega-92.vercel.app/**
 
 ## What I Have Learned
 

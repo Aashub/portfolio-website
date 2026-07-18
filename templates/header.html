@@ -32,6 +32,55 @@
     <!-- here we are url_for method for specifying correct file path for css file.-->
 
 
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/x-icon"
+          href="{{ url_for('static', filename='static/assets/img/favicon.ico') }}">
+
+    <!-- PNG Favicons -->
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="{{ url_for('static', filename='static/assets/img/favicon-32x32.png') }}">
+
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="{{ url_for('static', filename='static/assets/img/favicon-16x16.png') }}">
+
+    <!-- Apple Devices -->
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="{{ url_for('static', filename='static/assets/img/apple-touch-icon.png') }}">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest"
+          href="{{ url_for('static', filename='static/assets/img/site.webmanifest') }}">
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/x-icon"
+          href="{{ url_for('static', filename='assets/img/favicon.ico') }}">
+
+    <!-- PNG Favicons -->
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="{{ url_for('static', filename='assets/img/favicon-32x32.png') }}">
+
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="{{ url_for('static', filename='assets/img/favicon-16x16.png') }}">
+
+    <!-- Apple Devices -->
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest"
+          href="{{ url_for('static', filename='assets/img/site.webmanifest') }}">
+
 </head>
 
 <body>
@@ -85,26 +134,30 @@
             <ul class="navbar-nav gap-lg-4">
 
                 <li class="nav-item">
-                    <a class="nav-link {% if request.endpoint == 'home' %}active{% endif  %}" href="{{url_for('home')}}">
+                    <a class="nav-link {% if request.endpoint == 'home' %}active{% endif  %}"
+                       href="{{url_for('home')}}">
                         Home
                     </a>
                 </li>
 
 
                 <li class="nav-item">
-                    <a class="nav-link {% if request.endpoint == 'projects' %}active{% endif  %}" href="{{url_for('projects')}}">
+                    <a class="nav-link {% if request.endpoint == 'projects' %}active{% endif  %}"
+                       href="{{url_for('projects')}}">
                         Projects
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link {% if request.endpoint == 'about_me' %}active{% endif %}" href="{{ url_for('about_me') }}">
+                    <a class="nav-link {% if request.endpoint == 'about_me' %}active{% endif %}"
+                       href="{{ url_for('about_me') }}">
                         About Me
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link {% if request.endpoint == 'contact' %}active{% endif  %} " href="{{ url_for('contact') }}">
+                    <a class="nav-link {% if request.endpoint == 'contact' %}active{% endif  %} "
+                       href="{{ url_for('contact') }}">
                         Contact
                     </a>
                 </li>
